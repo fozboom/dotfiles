@@ -1,0 +1,147 @@
+// Zed settings
+    //
+    // For information on how to configure Zed, see the Zed
+    // documentation: https://zed.dev/docs/configuring-zed
+    //
+    // To see all of Zed's default settings without changing your
+    // custom settings, run `zed: open default settings` from the
+    // command palette (cmd-shift-p / ctrl-shift-p)
+    {
+      // -- GENERAL EDITOR SETTINGS --
+      "base_keymap": "VSCode",
+      "vim_mode": false,
+      "relative_line_numbers": false,
+      "format_on_save": "on",
+
+      // -- APPEARANCE (THEME, FONTS, ICONS) --
+      "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Catppuccin Mocha"
+      },
+      "icon_theme": "Catppuccin Macchiato",
+
+      "ui_font_family": "JetBrains Mono NL",
+      "ui_font_size": 21,
+
+      "buffer_font_family": "JetBrains Mono NL",
+      "buffer_font_size": 18,
+      "buffer_line_height": "comfortable",
+
+      // -- TABS AND PANELS SETTINGS --
+      "tabs": {
+        "file_icons": true,
+        "show_diagnostics": "all" // Show diagnostics (errors, warnings) in tabs
+      },
+      "scrollbar": {
+        "diagnostics": "information" // Display diagnostics on the scrollbar
+      },
+      // Panel locations
+      "project_panel": {
+        "dock": "right"
+      },
+      "outline_panel": {
+        "dock": "right"
+      },
+      "chat_panel": {
+        "dock": "left"
+      },
+      "notification_panel": {
+        "dock": "left"
+      },
+
+      // -- LANGUAGE-SPECIFIC CONFIGURATION --
+      "languages": {
+        "Python": {
+          "language_servers": [
+            "basedpyright",
+            "ruff",
+            "!pyright"
+          ],
+          "format_on_save": "on",
+          // Formatting with `ruff`.
+          "formatter": {
+            "external": {
+              "command": "ruff",
+              "arguments": [
+                "format",
+                "-"
+              ]
+            }
+          },
+          // Code actions on format for `ruff`.
+          "code_actions_on_format": {
+            // Automatically fix all fixable issues
+            "source.fixAll.ruff": true,
+            "source.organizeImports.ruff": true // Organize (sort) imports
+          }
+        }
+      },
+
+      // -- GLOBAL LSP (LANGUAGE SERVER PROTOCOL) SETTINGS --
+      "lsp": {
+        "rust-analyzer": {
+          "initialization_options": {
+            "inlayHints": {
+              "maxLength": null,
+              "lifetimeElisionHints": {
+                "enable": "skip_trivial",
+                "useParameterNames": true
+              },
+              "closureReturnTypeHints": {
+                "enable": "always"
+              }
+            }
+          }
+        },
+        "basedpyright": {
+          "settings": {
+            "python": {
+              "pythonPath": ".venv/bin/python"
+            },
+            "basedpyright.analysis": {
+              "diagnosticMode": "workspace",
+              "inlayHints": {
+                "callArgumentNames": false
+              }
+            }
+          }
+        }
+      },
+
+      // -- GLOBAL FORMATTER --
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": [
+            "--style=file",
+            "--assume-filename={buffer_path}"
+          ]
+        }
+      },
+
+      // -- FILE SCAN EXCLUSIONS --
+      "file_scan_exclusions": [
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/.jj",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings",
+        "**/.ruff_cache",
+        "**/.ropeproject",
+        "**/.venv",
+        "**/venv",
+        "**/__pycache__"
+      ],
+
+      // -- TELEMETRY --
+      // Disable anonymous data collection.
+      "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+      }
+    }
