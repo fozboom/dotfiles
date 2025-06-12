@@ -1,0 +1,122 @@
+{
+    // =================================================================================
+    // Editor & UI
+    // =================================================================================
+
+    // Font & Appearance
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Palenight (Mild Contrast)",
+    "workbench.iconTheme": "material-icon-theme",
+    
+    // Cursor & Typing Behavior
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.tabCompletion": "off",
+    "editor.acceptSuggestionOnEnter": "on",
+
+    // Layout & Rendering
+    "editor.wordWrap": "on",
+    "editor.rulers": [ 80, 120 ],
+    "editor.bracketPairColorization.enabled": true,
+    "editor.inlayHints.enabled": "on",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.sideBar.location": "right",
+    "workbench.settings.editor": "json",
+
+    // =================================================================================
+    // File Management
+    // =================================================================================
+    "files.autoSave": "onFocusChange",
+    "files.defaultLanguage": "python",
+    "files.simpleDialog.enable": true,
+    "explorer.autoReveal": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmPasteNative": false,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+
+    // =================================================================================
+    // Language Specific
+    // =================================================================================
+
+    // Python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+            "source.organizeImports": "always"
+        }
+    },
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.terminal.activateEnvironment": true,
+
+    // C/C++
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "C_Cpp.intelliSenseEngine": "disabled", // Use clangd instead
+
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    // =================================================================================
+    // Extension Settings
+    // =================================================================================
+
+    // GitLens
+    "gitlens.ai.model": "gitkraken",
+    "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.home.preview.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+
+    // Auto Docstring (for Python)
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.guessTypes": true,
+    "autoDocstring.startOnNewLine": true,
+
+    // Markdown
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    
+    // Others
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "redhat.telemetry.enabled": true,
+
+    // =================================================================================
+    // Version Control (Git)
+    // =================================================================================
+    "git.autofetch": true,
+    "git.confirmSync": false,
+
+    // =================================================================================
+    // Integrated Terminal
+    // =================================================================================
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.location": "right",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    // =================================================================================
+    // Security
+    // =================================================================================
+    "security.workspace.trust.untrustedFiles": "open",
+}
