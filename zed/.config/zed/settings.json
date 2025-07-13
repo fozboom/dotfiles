@@ -17,15 +17,13 @@
       "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Catppuccin Mocha"
+        "dark": "Catppuccin Mocha (Blur)"
       },
-      "icon_theme": "Catppuccin Macchiato",
+      "icon_theme": "Catppuccin Latte",
 
-      "ui_font_family": "JetBrains Mono NL",
-      "ui_font_size": 21,
+      "ui_font_size": 16,
 
-      "buffer_font_family": "JetBrains Mono NL",
-      "buffer_font_size": 18,
+      "buffer_font_size": 15,
       "buffer_line_height": "comfortable",
 
       // -- TABS AND PANELS SETTINGS --
@@ -143,5 +141,15 @@
       "telemetry": {
         "diagnostics": false,
         "metrics": false
-      }
+      },
+
+      // Workspace restoration behavior.
+      //   All workspaces ("last_session"), last workspace ("last_workspace") or "none"
+      "restore_on_startup": "last_session",
+      // Whether to attempt to restore previous file's state when opening it again.
+      // E.g. for editors, selections, folds and scroll positions are restored
+      "restore_on_file_reopen": true,
+      // Whether to automatically close files that have been deleted on disk.
+      "close_on_file_delete": false
+
     }
