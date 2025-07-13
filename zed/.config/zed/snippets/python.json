@@ -1,0 +1,81 @@
+{
+  "Function Snippet": {
+    "prefix": "py_def",
+    "description": "Default function snippet",
+    "body": [
+      "def ${1:func_name}(${2:arg: int, arg2: str}) -> ${3:None}:",
+      "    ${4:pass}"
+    ]
+  },
+  "Main Entry Point": {
+    "prefix": "py_main",
+    "description": "Creates main entry point for the application",
+    "body": [
+      "def main() -> None:",
+      "    \"\"\"Main entry point for the application.\"\"\"",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()",
+      ""
+    ]
+  },
+  "Async Main Entry Point": {
+    "prefix": "py_amain",
+    "description": "Creates async main entry point for the application",
+    "body": [
+      "import asyncio",
+      "",
+      "",
+      "async def main() -> None:",
+      "    \"\"\"Main entry point for the application.\"\"\"",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    asyncio.run(main())",
+      ""
+    ]
+  },
+  "Numpy Style Docstring": {
+    "prefix": "py_doc",
+    "description": "Function docstring in NumPy style",
+    "body": [
+      "\"\"\"${1:Summary of the function.}",
+      "",
+      "${2:Extended summary, if needed.}",
+      "",
+      "Parameters",
+      "----------",
+      "${3:param_name} : ${4:param_type}",
+      "    ${5:Description of the parameter.}",
+      "",
+      "Returns",
+      "-------",
+      "${6:return_type}",
+      "    ${7:Description of the return value.}",
+      "\"\"\""
+    ]
+  },
+  "Class with __repr__ and __str__": {
+    "prefix": "py_class",
+    "description": "Class with explicit overrides for dunder methods",
+    "body": [
+      "from typing import override",
+      "",
+      "class ${1:ClassName}:",
+      "    \"\"\"${2:Class docstring.}\"\"\"",
+      "",
+      "    def __init__(self, ${3:args}) -> None:",
+      "        $0",
+      "",
+      "    @override",
+      "    def __repr__(self) -> str:",
+      "        attrs = ', '.join(f'{k}={v!r}' for k, v in self.__dict__.items())",
+      "        return f'{self.__class__.__name__}({attrs})'",
+      "",
+      "    @override",
+      "    def __str__(self) -> str:",
+      "        return self.__repr__()"
+    ]
+  }
+}
