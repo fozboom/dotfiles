@@ -1,0 +1,10 @@
+{
+    "files.autoSave": "onFocusChange",
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.showIcons": false,
+    "workbench.editor.labelFormat": "medium",
+    "breadcrumbs.enabled": false, 
+    "editor.formatOnSave": true
+}
