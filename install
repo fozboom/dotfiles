@@ -23,6 +23,6 @@ run_dotbot () {
     --plugin-dir dotbot-brewfile \
     -c "$config" $ARGS
 }
-run_dotbot 'steps/vscode.yml' || true
 run_dotbot 'steps/brew.yml' || true
 run_dotbot 'steps/terminal.yml' || true
+run_dotbot 'steps/vscode.yml' || true
