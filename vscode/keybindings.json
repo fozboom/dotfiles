@@ -1,4 +1,4 @@
-// Custom keybindings. Entries with a leading '-' in "command" are removals of defaults.
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "shift+cmd+g",

@@ -5,6 +5,20 @@
     "workbench.editor.showTabs": "single",
     "workbench.editor.showIcons": false,
     "workbench.editor.labelFormat": "medium",
-    "breadcrumbs.enabled": false, 
-    "editor.formatOnSave": true
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "cpp": false,
+        "python": false
+    },
+    "explorer.confirmDragAndDrop": false,
+    "chat.commandCenter.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false
 }
