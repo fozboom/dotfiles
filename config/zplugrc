@@ -1,0 +1,20 @@
+source "$ZPLUG_HOME/init.zsh"
+
+# Must be the first one:
+zplug 'Aloxaf/fzf-tab', depth:1
+
+# Sorted in order of appearance (new at the bottom):
+zplug 'sobolevn/fzf-simple-git', depth:1
+
+zplug 'zsh-users/zsh-syntax-highlighting', depth:1
+
+zplug "zsh-users/zsh-autosuggestions"
+
+# Install plugins if there are plugins that have not been installed:
+if ! zplug check; then
+  zplug install
+  zplug clean
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
