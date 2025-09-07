@@ -124,6 +124,19 @@ else
   [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
 fi
 
+# Create ~/.local/bin/env if it doesn't exist and source it
+if [[ ! -f "$HOME/.local/bin/env" ]]; then
+  mkdir -p "$HOME/.local/bin"
+  cat > "$HOME/.local/bin/env" << 'EOF'
+# Personal environment variables
+# Add your custom environment variables here
+
+# Example:
+# export EDITOR="nvim"
+# export BROWSER="firefox"
+# export PATH="$HOME/.local/bin:$PATH"
+EOF
+fi
 . "$HOME/.local/bin/env"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/$USER/.docker/completions $fpath)
