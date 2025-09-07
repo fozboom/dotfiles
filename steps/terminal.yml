@@ -32,3 +32,6 @@
     ~/.zplugrc:
       path: config/zplugrc
       force: true
+    ~/.p10k.zsh:
+      path: config/p10k.zsh
+      force: true
