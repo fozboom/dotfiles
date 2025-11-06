@@ -163,10 +163,6 @@ source "$HOME/.shell/.std"  # should be the first one
 source "$HOME/.shell/.aliases"
 source "$HOME/.shell/.completions"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/daniel/.lmstudio/bin"
-# End of LM Studio CLI section
-
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/daniel/.docker/completions $fpath)
 autoload -Uz compinit
