@@ -4,7 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -138,12 +138,6 @@ if [[ ! -f "$HOME/.local/bin/env" ]]; then
 EOF
 fi
 . "$HOME/.local/bin/env"
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/$USER/.docker/completions $fpath)
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
 eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/trash-cli/bin:$PATH"
 
@@ -181,3 +175,27 @@ fpath=(/Users/daniel/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+if [ -f $(brew --prefix)/etc/zsh_completion ]; then
+. $(brew --prefix)/etc/zsh_completion
+fi
+
+
+# The next line updates PATH for CLI.
+if [ -f '/Users/daniel/yandex-cloud/path.bash.inc' ]; then source '/Users/daniel/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/daniel/yandex-cloud/completion.zsh.inc' ]; then source '/Users/daniel/yandex-cloud/completion.zsh.inc'; fi
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
+
+export PATH="/Users/daniel/Library/Python/3.9/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
