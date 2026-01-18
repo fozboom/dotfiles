@@ -189,6 +189,7 @@ if [ -f '/Users/daniel/yandex-cloud/completion.zsh.inc' ]; then source '/Users/d
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
     autoload -Uz compinit
     compinit
@@ -199,3 +200,20 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+
+
+
+
+
+# === Disable Arrow Keys for History (Force Ctrl+P/N) ===
+# Удаляем привязки для стрелок (учитываем разные коды терминалов)
+bindkey -r "^[[A"
+bindkey -r "^[[B"
+bindkey -r "^[OA"
+bindkey -r "^[OB"
+
+
+## for SOPS
+export EDITOR="code --wait"
+
